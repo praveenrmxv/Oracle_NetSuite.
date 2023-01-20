@@ -1,0 +1,33 @@
+/**
+ * @NApiVersion 2.x
+ * @NScriptType ClientScript
+ * @NModuleScope Public
+ */
+define(['N/error','N/log','N/currentRecord'],function(error,log,currentRecord){
+    function pageInit(context){
+        alert('This is My PageInit function is working')
+
+        var currentRecord=context.currentRecord;
+        currentRecord.setValue({
+            fieldId:'entity',
+            value:'12345'
+        });
+        
+        currentRecord.setValue({
+            fieldId:'subsidiary',
+
+            value: 'ANSH_02'
+
+        });
+        currentRecord.setValue({
+            fieldId:'department',
+            value:'Pharmacy'
+        });
+
+       
+       
+    }
+    return {
+        pageInit:pageInit,
+    }
+})
